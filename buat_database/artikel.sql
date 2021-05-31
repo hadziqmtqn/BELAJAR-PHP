@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 31 Bulan Mei 2021 pada 07.30
+-- Waktu pembuatan: 31 Bulan Mei 2021 pada 09.12
 -- Versi server: 10.5.10-MariaDB
 -- Versi PHP: 7.4.19
 
@@ -53,6 +53,7 @@ CREATE TABLE `post` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` bigint(15) UNSIGNED NOT NULL,
   `judul` text NOT NULL,
+  `slug` text NOT NULL,
   `detail` longtext NOT NULL,
   `kategori_id` int(10) UNSIGNED NOT NULL,
   `gambar_unggulan` text DEFAULT NULL,

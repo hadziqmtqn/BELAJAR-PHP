@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 31 Bulan Mei 2021 pada 06.28
+-- Waktu pembuatan: 31 Bulan Mei 2021 pada 06.58
 -- Versi server: 10.5.10-MariaDB
 -- Versi PHP: 7.4.19
 
@@ -73,6 +73,15 @@ CREATE TABLE `roles` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `roles`
+--
+
+INSERT INTO `roles` (`id`, `nama`, `created_at`, `updated_at`) VALUES
+(1, 'Admin', NULL, NULL),
+(2, 'Penulis', NULL, NULL),
+(3, 'Editor', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -165,7 +174,7 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT untuk tabel `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `status`

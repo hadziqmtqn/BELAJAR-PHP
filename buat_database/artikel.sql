@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 31 Bulan Mei 2021 pada 06.58
+-- Waktu pembuatan: 31 Bulan Mei 2021 pada 07.30
 -- Versi server: 10.5.10-MariaDB
 -- Versi PHP: 7.4.19
 
@@ -96,6 +96,14 @@ CREATE TABLE `status` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `status`
+--
+
+INSERT INTO `status` (`id`, `nama`, `created_at`, `updated_at`) VALUES
+(1, 'Aktif', NULL, NULL),
+(2, 'Tidak aktif', NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -115,6 +123,13 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `users`
+--
+
+INSERT INTO `users` (`id`, `nama`, `role`, `no_hp`, `email`, `password`, `alamat`, `photo`, `status_id`, `created_at`, `updated_at`) VALUES
+(1, 'Anonim', 1, '0513645646', 'anonim@mail.com', '34ffgdsfgsd45retr', 'Jl. Paus', '', 1, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -180,13 +195,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT untuk tabel `status`
 --
 ALTER TABLE `status`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(15) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(15) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
